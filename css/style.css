@@ -498,6 +498,7 @@ h1, h2, h3, h4, h5, h6, p {
     color: #ffffff;
     background-color: #4d5ae5;
     position: relative;
+
   }
   .footer-subscribe-icon {
     position: absolute;
@@ -548,14 +549,9 @@ h1, h2, h3, h4, h5, h6, p {
   }
    .modal-btn {
     position: absolute;
-    /*top: 50%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);*/
-    top: 24px;
-    right: 24px;
-    width: 408px;
-    height: 80%;
-    max-height: 584px;
+    transform: translate(-50%,-50%);
     stroke: #000000;
     fill: #000000;
     width: 24px;
@@ -564,9 +560,6 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0;
     border-radius: 50%;
     background-color: #e7e9fc;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.13),
-    0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px 0 rgba(0, 0, 0, 0.2);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
@@ -596,6 +589,7 @@ h1, h2, h3, h4, h5, h6, p {
     color: #8e8f99;
    }
    .rewiew-form-input {
+    display: block;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -607,11 +601,14 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: transparent;
     padding-left: 38px;
     outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .rewiew-form-input:focus {
-    /*outline: none;*/
+    outline: none;
     border: 1px solid #4D5AE5;
+    }
+    .rewiew-form-input-wrapper {
+      position: relative;
     }
     .rewiew-form-icons {
       position: absolute;
@@ -620,24 +617,26 @@ h1, h2, h3, h4, h5, h6, p {
       transform: translateY(-50%);
       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     }
+    .rewiew-form-icons:hover,
     .rewiew-form-icons:focus {
       fill: #4D5AE5;
     }
-   .rewiew-form-button {
+   /*.rewiew-form-button {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
    }
-   .rewiew-form-input-wrapper {
-      position: relative;
-    }
-  
+  */
     /*.rewiew-form-input:focus + .rewiew-form-icons {
       fill: #4D5AE5;
     }*/
-    .rewiew-form-input-textarea {
+    .rewiew-form-field-comment {
+      margin-bottom: 16px;
+    }
+
+    .rewiew-form-input-comment {
       border: 1px solid rgba(46, 47, 66, 0.4);
       border-radius: 4px;
       width: 100%;
@@ -648,11 +647,13 @@ h1, h2, h3, h4, h5, h6, p {
       line-height: 1.17;
       letter-spacing: 0.04em;
       resize: none;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .rewiew-form-input-textarea::placeholder {
+    .rewiew-form-input-comment::placeholder {
       color: rgba(46, 47, 66, 0.4);
     }
-    .rewiew-form-input-textarea:focus {
+    .rewiew-form-input-comment:hover,
+    .rewiew-form-input-comment:focus {
       border-color: #4D5AE5;
       outline: none;
     }
