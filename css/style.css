@@ -460,7 +460,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     gap: 24px;
   }
-  .footer-subscribe-input {
+  .footer-subscribe-email {
     display: block;
     padding: 8px 16px;
     border: 1px solid #ffffff;
@@ -475,7 +475,7 @@ h1, h2, h3, h4, h5, h6, p {
     letter-spacing: 0.04em;
     color: #ffffff;
   }
-  .footer-subscribe-input::placeholder {
+  .footer-subscribe-email::placeholder {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
@@ -486,7 +486,6 @@ h1, h2, h3, h4, h5, h6, p {
     min-width: 165px;
     height: 40px;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -497,15 +496,13 @@ h1, h2, h3, h4, h5, h6, p {
     border-radius: 4px;
     color: #ffffff;
     background-color: #4d5ae5;
-    position: relative;
-
-  }
+    position: relative;}
   .footer-subscribe-icon {
     position: absolute;
     top: 50%;
     right: 24px;
     transform: translateY(-50%);
-    fill: #ffffff;
+    background-color: #ffffff;
     
   }
 
