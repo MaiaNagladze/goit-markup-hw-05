@@ -528,7 +528,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
    .modal-overlay.is-open {
     opacity: 1; 
-    pointer-events: auto;
+   
   }
   .modal {
     position: relative;
