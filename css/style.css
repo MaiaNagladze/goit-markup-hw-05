@@ -500,6 +500,8 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;}*/
     .footer-subscribe-btn {
       display: flex;
+      justify-content: center;
+      align-items: center;
       font-weight: 500;
       line-height: 1.5;
       letter-spacing: 0.04em;
@@ -742,25 +744,21 @@ h1, h2, h3, h4, h5, h6, p {
         height: 100%;
         background-color: rgba(46, 47, 66, 0.4);
         z-index: 99999;
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         opacity: 0;
         pointer-events: none;
-        visibility: hidden;
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      
-        padding: 72px 24px 24px 24px;
+        padding: 74px 24px 24px 24px;
       
       }
        
        .modal-overlay.is-open {
         opacity: 1;
-        visibility: visible;
         pointer-events: auto;  
-       }
+      }
       .modal {
         width: 408px;
         height: 80%;
@@ -769,26 +767,20 @@ h1, h2, h3, h4, h5, h6, p {
         background-color: #fcfcfc;
         border-radius: 4px;
         padding: 24px;
+        position: absolute;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-         0 1px 3px 0 rgba(0, 0, 0, 0.12),
-          0 2px 1px 0 rgba(0, 0, 0, 0.2);
-          position: absolute;
-
-/*===add===*/
-          top:50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
-       }
+        0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 2px 1px 0 rgba(0, 0, 0, 0.2);
+      }
       .modal-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
         border: 1px solid rgba(0, 0, 0, 0.1);
         cursor: pointer;
-/*===and===*/
+        fill: #000000;
         position: absolute;
         border-radius: 50%;
         width: 24px;
@@ -805,8 +797,6 @@ h1, h2, h3, h4, h5, h6, p {
       .modal-btn:focus {
         background-color: #404bbf;
         border: none;
-/*===add===*/
-        fill: #ffffff;
       }
       .modal-btn-icon { 
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -936,6 +926,8 @@ h1, h2, h3, h4, h5, h6, p {
         border-radius: 2px;
         border: 1px solid rgba(46, 47, 66, 0.4);
 
+       
+
 /*===add===*/
         fill: transparent;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
@@ -944,6 +936,7 @@ h1, h2, h3, h4, h5, h6, p {
       }
       .rewiew-form-checkbox-icon {
        Fill: #4d5ae5; 
+       
 
       }
       .rewiew-form-link {
@@ -952,6 +945,7 @@ h1, h2, h3, h4, h5, h6, p {
         color: #4d5ae5;
       }
       .rewiew-form-button {
+        display: block;
        cursor: pointer;
        border: none;
        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
