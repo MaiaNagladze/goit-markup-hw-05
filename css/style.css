@@ -51,6 +51,9 @@ h1, h2, h3, h4, h5, h6, p {
     padding-top: 120px;
     padding-bottom: 120px;
   }
+  .accent-color {
+    color: #4d5ae5;
+  }
   h2 {
     text-align: center;
     font-family: inherit;
@@ -63,6 +66,9 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #ffffff;
+  }
+  input {
+    font-family: inherit;
   }
 
   /*========= /COMMET STYLES =========*/
@@ -444,7 +450,61 @@ h1, h2, h3, h4, h5, h6, p {
   .footer-social {
     margin-right: 80px;
   }
-  .footer-subscribe {
+.footer-subscribe {
+    display: block;
+    
+  }
+.footer-subscribe-text {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+  
+.footer-subscribe-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    }
+.footer-subscribe-label {
+    
+  }
+.footer-subscribe-input {
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    min-width: 264px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background-color: transparent;
+    padding-left: 16px;
+  }
+  .footer-subscribe-input::placeholder {
+    color: #ffffff;
+  }
+  .btn-conteiner {
+    position: relative;
+  }
+  .footer-subscribe-btn {
+    border-radius: 4px;
+    border: none;
+    padding: 8px 64px 8px 24px;
+    min-width: 165px;
+    height: 40px;
+    background-color: #4d5ae5;
+  }
+  
+  .footer-subscribe-icon {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    fill:#ffffff;
+  }
+/*.footer-subscribe {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -482,7 +542,7 @@ h1, h2, h3, h4, h5, h6, p {
     letter-spacing: 0.04em;
     color: #ffffff;
   }
-  /*.footer-subscribe-btn {
+   .footer-subscribe-btn {
     padding: 8px 16px;
     min-width: 165px;
     height: 40px;
@@ -497,7 +557,8 @@ h1, h2, h3, h4, h5, h6, p {
     border-radius: 4px;
     color: #ffffff;
     background-color: #4d5ae5;
-    position: relative;}*/
+    position: relative;}
+
     .footer-subscribe-btn {
       display: flex;
       justify-content: center;
@@ -523,7 +584,7 @@ h1, h2, h3, h4, h5, h6, p {
       transform: translateY(-50%);
       fill:#ffffff;
     }
-  /*.footer-subscribe-icon {
+      .footer-subscribe-icon {
     position: absolute;
     top: 50%;
     right: 24px;
@@ -536,435 +597,188 @@ h1, h2, h3, h4, h5, h6, p {
 
   /*=============MODAL WINDOW=============*/
 
- /*.modal-overlay {
-    background-color: rgba(46, 47, 66, 0.4);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-   .modal-overlay.is-open {
-    opacity: 1; 
-   
-  }
-  .modal {
-    position: relative;
-    background-color: #fcfcfc;
-    border-radius: 4px;
-    padding: 72px 24px 24px;
-    width: 408px;
-    height: 80%;
-    max-height: 584px;
-    overflow: auto;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1px 3px 0 rgba(0, 0, 0, 0.12),
-    0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-   .modal-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    stroke: #000000;
-    fill: #000000;
-    width: 24px;
-    height: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 0;
-    border-radius: 50%;
-    background-color: #e7e9fc;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   }
-   .modal-btn:hover,
-   .modal-btn:focus {
-    background-color: #404bbf;
-    border: none;
-    fill: #ffffff;
-   }
-   .modal-slogan {
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #2e2f42;
-    margin-bottom: 16px;
-   }
-   .rewiew-form-field{
-    margin-bottom: 8px;
-  }
-   .rewiew-form-label {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #8e8f99;
-   }
-   .rewiew-form-input {
-    display: block;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #2E2F42;
-    width: 100%;
-    height: 40px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    background-color: transparent;
-    padding-left: 38px;
-    outline: transparent;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .rewiew-form-input:focus {
-    outline: none;
-    border: 1px solid #4D5AE5;
-    }
-    .rewiew-form-input-wrapper {
-      position: relative;
-    }
-    .rewiew-form-icons {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      transform: translateY(-50%);
-      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-    }
-    .rewiew-form-icons:hover,
-    .rewiew-form-icons:focus {
-      fill: #4D5AE5;
-    }
-   /.rewiew-form-button {
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: #fff;
-   }
-  /
-    /.rewiew-form-input:focus + .rewiew-form-icons {
-      fill: #4D5AE5;
-    }/
-    .rewiew-form-field-comment {
-      margin-bottom: 16px;
-    }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal {
+  width: 408px;
+  height: 80%;
+  max-height: 584px;
+  background-color: #ffffff;
+  overflow: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fcfcfc;
+  padding: 72px 24px 24px 24px;
+  position: relative;
 
-    .rewiew-form-input-comment {
-      border: 1px solid rgba(46, 47, 66, 0.4);
-      border-radius: 4px;
-      width: 100%;
-      height: 120px;
-      padding: 8px 16px;
-      resize: none;
-      font-size: 12px;
-      line-height: 1.17;
-      letter-spacing: 0.04em;
-      resize: none;
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .rewiew-form-input-comment::placeholder {
-      color: rgba(46, 47, 66, 0.4);
-    }
-    .rewiew-form-input-comment:hover,
-    .rewiew-form-input-comment:focus {
-      border-color: #4D5AE5;
-      outline: none;
-    }
-    .rewiew-form-custom-checkbox {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 16px;
-      height: 16px;
-      border: 1px solid rgba(46, 47, 66, 0.4);
-      border-radius: 2px;
-      stroke: none;
-      fill: transparent;
-      margin-right: 8px;
-      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .rewiew-form-checkbox-icon {
-       width: 10px;
-       height: 8px;
-    }
-    .rewiew-form-checkbox-input:checked + 
-    .rewiew-form-label > 
-    .rewiew-form-custom-checkbox {
-      /cursor: pointer;/
-      fill: #4D5AE5;
-      background-color: #4D5AE5;
-      }
-      .rewiew-form-checkbox {
-        margin-bottom: 24px;
-      }
-      .rewiew-form-label {
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        color: #8e8f99;
-      }
-      .rewiew-form-link {
-        line-height: 1.33;
-        text-decoration: underline;
-        color: #4d5ae5;
-       }
-      .rewiew-form-button {
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-        background-color: #4d5ae5;
-        border-radius: 4px;
-        padding: 16px 32px;
-        margin-right: 169px;
-        height: 56px; 
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        text-align: center;
-        color: #ffffff;
-        cursor: pointer;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }*/
-      
-      .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(46, 47, 66, 0.4);
-        z-index: 99999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 74px 24px 24px 24px;
-      
-      }
-       
-       .modal-overlay.is-open {
-        opacity: 1;
-        pointer-events: auto;  
-      }
-      .modal {
-        width: 408px;
-        height: 80%;
-        min-height: 584px;
-        overflow: auto;
-        background-color: #fcfcfc;
-        border-radius: 4px;
-        padding: 24px;
-        position: absolute;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        top:50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-        0 1px 3px 0 rgba(0, 0, 0, 0.12),
-        0 2px 1px 0 rgba(0, 0, 0, 0.2);
-      }
-      .modal-btn {
-        display: block;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        fill: #000000;
-        position: absolute;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        top: 24px;
-        right: 24px;
-        padding: 0;
-        line-height: 0;
-        background-color: #e7e9fc;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .modal-btn:hover,
-      .modal-btn:focus {
-        background-color: #404bbf;
-        border: none;
-      }
-      .modal-btn-icon { 
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      /*===and====*/
-      .modal-slogan {
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #2e2f42;
-        margin-bottom: 16px;
-        padding-top: 48px;
+}
+.modal-btn {
+  border-radius: 50%;
+  border: none;
+  background-color: #e7e9fc;
+  stroke: #000000;
+  padding: 0;
+  line-height: 0;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        text-align: center;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #404BBF;
+}
+.modal-btn-icon {
+}
+.modal-slogan {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.rewiew-form {
+}
+.rewiew-form-field {
+  margin-bottom: 8px;
+}
+.rewiew-form-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 8px;
+}
+.rewiew-form-input-wrapper {
+  position: relative;
+}
+.rewiew-form-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  padding-left: 38px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  transform: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .rewiew-form-input:focus {
+  outline: none;
+  border-color: #4D5AE5;
+}
+.rewiew-form-input:focus + .rewiew-form-icons {
+  fill: #4D5AE5;
+}
+.rewiew-form-icons {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+.rewiew-form-field-comment {
+  margin-bottom: 16px;
+}
+.rewiew-form-comment {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  background-color: transparent;
+  resize: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.rewiew-form-comment::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+.rewiew-form-comment:focus {
+  outline: none;
+  border-color: #4D5AE5; 
+}
+.rewiew-form-checkbox-wrapper {
+  margin-bottom: 24px;
+}
+.rewiew-form-checkbox:checked + 
+.rewiew-form-checkbox-label > 
+.rewiew-form-custom-checkbox {
+  fill: #4D5AE5;
+}
+.rewiew-form-checkbox:focus + 
+.rewiew-form-checkbox-label > 
+.rewiew-form-custom-checkbox {
+  outline: 2px solid #4D5AE5;
+}
+.rewiew-form-checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.rewiew-form-custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  fill: none;
+}
+.rewiew-form-checkbox-icon {
+}
+.rewiew-form-link {
+  text-decoration: underline;
+}
+.rewiew-form-button {
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #4d5ae5;
+  border: none;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.review-form-button:hover,
+.review-form-button:focus {
+  background-color: #404BBF;
+}
 
-      }
-      .rewiew-form {
-      }
-      .rewiew-form-field {
-        margin-bottom: 8px;
-      }
-      .rewiew-form-label {
-        display: block;
-       font-size: 12px;
-       line-height: 1.17;
-       letter-spacing: 0.04em;
-       color: #8e8f99;
-       margin-bottom: 4px;
-      }
-      .rewiew-form-input-wrapper {
-        position: relative;
-      }
-      .rewiew-form-input {
-        border: 1px solid rgba(46, 47, 66, 0.4);
-        background-color: transparent;
-        outline: transparent;
-/*==and===*/
-        border-radius: 4px;
-        width: 100%;
-        height: 40px;
-        color: #000000;
-        padding-left: 38px;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .rewiew-form-input:hover,
-      .rewiew-form-input:focus {
-        outline: none;
-        border-color: #4d5ae5;
-      }
-      .rewiew-form-icons {
-        position: absolute;
-        top: 50%;
-        left: 16px;
-        transform: translateY(-50%);
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .rewiew-form-input:hover + .rewiew-form-icons,
-      .rewiew-form-input:focus + .rewiew-form-icons {
-       fill: #4d5ae5
-      }
-      .rewiew-form-field-comment {
-        margin-bottom: 16px;
-      }
-      .rewiew-form-input-comment {
-        border: 1px solid rgba(46, 47, 66, 0.4);
-        border-radius: 4px;
-        width: 100%;
-        height: 120px;
-        padding: 8px 16px;
-        color: rgba(46, 47, 66, 0.4);
-        resize: none;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
-        background-color: transparent;
-        outline: transparent;
-      }
-      .rewiew-form-input-comment::placeholder {
-        color: rgba(46, 47, 66, 0.4);
-      }
-      .rewiew-form-input-comment:hover,
-      .rewiew-form-input-comment:focus {
-        outline: none;
-        border-color: #4d5ae5;
-      }
-      .rewiew-form-checkbox {
-        margin-bottom: 24px;
-      }
-      .rewiew-form-checkbox-input {
-
-      }
-      .rewiew-form-checkbox-input:checked + 
-      .rewiew-form-label-checkbox > 
-      .rewiew-form-custom-checkbox {
-        background-color: #404bbf;
-        fill: #F4F4FD;
-
-
-        border: none;
-        transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .rewiew-form-checkbox-input:focus + 
-      .rewiew-form-label-checkbox > 
-      .rewiew-form-custom-checkbox {
-        outline: 2px solid rgba(0, 0, 0, 0.5)
-      }
-      .rewiew-form-label-checkbox {
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        color: #8e8f99;
-      }
-      .rewiew-form-custom-checkbox {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        width: 16px;
-        height: 16px;
-        border-radius: 2px;
-        border: 1px solid rgba(46, 47, 66, 0.4);
-
-       
-
-/*===add===*/
-        fill: transparent;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-         fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 
-      }
-      .rewiew-form-checkbox-icon {
-       Fill: #4d5ae5; 
-       
-
-      }
-      .rewiew-form-link {
-        line-height: 1.33;
-        text-decoration: underline;
-        color: #4d5ae5;
-      }
-      .rewiew-form-button {
-        display: block;
-       cursor: pointer;
-       border: none;
-       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-/*===and===*/
-        border-radius: 4px;
-        padding: 16px 32px;
-        min-width: 169px;
-        height: 56px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #4D5AE5;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        text-align: center;
-        color: #ffffff;
-      }
-
-   
-
-   
-
+ /*=============MODAL WINDOW=============*/
