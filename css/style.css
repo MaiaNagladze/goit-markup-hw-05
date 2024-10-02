@@ -455,6 +455,7 @@ h1, h2, h3, h4, h5, h6, p {
     
   }
 .footer-subscribe-text {
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
@@ -463,7 +464,9 @@ h1, h2, h3, h4, h5, h6, p {
   
 .footer-subscribe-form {
     display: flex;
-   
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
     }
 .footer-subscribe-label {
     
@@ -493,6 +496,10 @@ h1, h2, h3, h4, h5, h6, p {
     min-width: 165px;
     height: 40px;
     background-color: #4d5ae5;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
     color: #ffffff;
   }
   
