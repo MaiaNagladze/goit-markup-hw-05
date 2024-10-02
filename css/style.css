@@ -163,7 +163,6 @@
   /*================ HERO SECTION ==========*/
   
   .hero {
-    position: relative;
     margin-top: auto;
     margin-bottom: auto;
     padding: 188px 0;
@@ -518,6 +517,7 @@
   /*=============MODAL WINDOW=============*/
 
 .modal-overlay {
+  position: relative;
   position: fixed;
   top: 0;
   left: 0;
