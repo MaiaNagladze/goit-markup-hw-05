@@ -527,7 +527,7 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: 999999;
   width: 100%;
   height: 100%;
-  background: rgba(46, 47, 66, 0.4);
+  background-color: rgba(46, 47, 66, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,14 +541,13 @@ h1, h2, h3, h4, h5, h6, p {
   pointer-events: auto;
 }
 .modal {
-  width: 408px;
-  height: 80%;
-  max-height: 584px;
-  background-color: #ffffff;
+  max-width: 408px;
+  max-height: 80%;
+  min-height: 584px;
   overflow: auto;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  background: #fcfcfc;
+  background-color: #fcfcfc;
   padding: 72px 24px 24px 24px;
   position: relative;
 
@@ -565,12 +564,14 @@ h1, h2, h3, h4, h5, h6, p {
   right: 24px;
   width: 24px;
   height: 24px;
-  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .modal-btn:hover,
 .modal-btn:focus {
  background-color: #404BBF;
+ fill: #ffffff;
 }
 .modal-btn-icon {
 }
@@ -609,6 +610,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #2e2f42;
+  outline: transparent;
   transform: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
@@ -686,24 +688,27 @@ h1, h2, h3, h4, h5, h6, p {
   color: #4d5ae5;
 }
 .rewiew-form-button {
-  border-radius: 4px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   padding: 16px 32px;
   min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
-  border: none;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: #ffffff;
   margin-left: auto;
   margin-right: auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.review-form-button:hover,
-.review-form-button:focus {
-  background-color: #404BBF;
+.review-form-button:active {
+  background-color: #404bbf;
+  border: 1px solid #404bbf;
+  fill: #f4f4fd;
 }
 
  /*=============MODAL WINDOW=============*/
