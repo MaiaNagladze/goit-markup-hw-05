@@ -47,7 +47,7 @@
     font-style: inherit;
     font-family: inherit;
   }
-  .section{
+  section{
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -60,7 +60,7 @@
   }
   h3 {
     font-family: inherit;
-    color:inherit; 
+    color: inherit; 
   }
   body {
     font-family: "Roboto", sans-serif;
@@ -80,7 +80,7 @@
     justify-content: space-between;
     align-self: center;
   }
-    .page-header{
+  .page-header{
       border-bottom: 1px solid #E7E9FC;
       box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
       0 1px 1px rgba(46, 47, 66, 0.16),
@@ -431,6 +431,7 @@
    margin-bottom: 16px;
   }
   .social-list-footer {
+    
    gap: 16px;
   }
   .social-link-footer {
@@ -486,10 +487,9 @@
     color: #ffffff;
   }
   .footer-subscribe-btn {
-    position: relative;
     border-radius: 4px;
     border: none;
-    padding: 8px 64px 8px 24px;
+    padding: 8px 24px;
     min-width: 165px;
     height: 40px;
     background-color: #4d5ae5;
@@ -501,16 +501,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .footer-subscribe-icon {
-    position: absolute;
-    top: 50%;
-    right: 24px;
-    transform: translateY(-50%);
     fill:#ffffff;
     margin-left: 16px;
   }
-
+  .footer-subscribe-btn:hover,
+  .footer-subscribe-btn:focus {
+    background-color: #31D0AA;
+  }
 
   /*=========== PAGE FOOTER ==============*/
 
@@ -520,7 +520,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999999;
+  z-index: 9999999;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
@@ -586,12 +586,12 @@
   color: #2e2f42;
   margin-bottom: 16px;
 }
-.rewiew-form {
+.review-form {
 }
-.rewiew-form-field {
+.review-form-field {
   margin-bottom: 8px;
 }
-.rewiew-form-label {
+.review-form-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -599,10 +599,10 @@
   display: block;
   margin-bottom: 4px;
 }
-.rewiew-form-input-wrapper {
+.review-form-input-wrapper {
   position: relative;
 }
-.rewiew-form-input {
+.review-form-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
@@ -613,27 +613,32 @@
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #2e2f42;
+  
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
- .rewiew-form-input:focus {
+ .review-form-input:focus {
   outline: none;
   border-color: #4D5AE5;
 }
-.rewiew-form-input:focus + .rewiew-form-icons {
+.review-form-input:focus + .review-form-icons
+ {
   fill: #4D5AE5;
 }
-.rewiew-form-icons {
+.review-form-icons {
   position: absolute;
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.rewiew-form-field-comment {
+.review-form-input:focus + .rewiew-form-icons {
+    fill: #4D5AE5;
+   }
+.review-form-field-comment {
   margin-bottom: 16px;
 }
-.rewiew-form-comment {
+.review-form-comment {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
@@ -648,35 +653,35 @@
   color: rgba(46, 47, 66, 0.4);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.rewiew-form-comment::placeholder {
+.review-form-comment::placeholder {
   color: #8e8f99;
 }
-.rewiew-form-comment:focus {
+.review-form-comment:focus {
   outline: none;
   border-color: #4D5AE5; 
 }
-.rewiew-form-checkbox-wrapper {
+.review-form-checkbox-wrapper {
   margin-bottom: 24px;
 }
-.rewiew-form-checkbox:checked + 
-.rewiew-form-checkbox-label > 
-.rewiew-form-custom-checkbox {
+.review-form-checkbox:checked + 
+.review-form-checkbox-label > 
+.review-form-custom-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
-.rewiew-form-checkbox:focus + 
-.rewiew-form-checkbox-label > 
-.rewiew-form-custom-checkbox {
+.review-form-checkbox:focus + 
+.review-form-checkbox-label > 
+.review-form-custom-checkbox {
   outline: 2px solid #4D5AE5;
 }
-.rewiew-form-checkbox-label {
+.review-form-checkbox-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
-.rewiew-form-custom-checkbox {
+.review-form-custom-checkbox {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -689,15 +694,16 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   margin-left: 8px;
 }
-.rewiew-form-checkbox-icon {
+.review-form-checkbox-icon {
 }
-.rewiew-form-link {
+.review-form-link {
   text-decoration: underline;
   color: #4d5ae5;
 }
-.rewiew-form-button {
-  border-radius: 2px;
+.review-form-button {
+  border-radius: 4px;
   border: none;
   padding: 16px 32px;
   min-width: 169px;
